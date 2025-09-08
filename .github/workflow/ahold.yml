@@ -1,0 +1,9 @@
+name: code for the ahold cilent
+on: [push]
+runs-on: self-hoststed
+env:
+  MY_NEWCODE: "install 7.2.1"
+jobs:
+  -name: ahold
+  run: echo "MY_NEWCODE"
+  
