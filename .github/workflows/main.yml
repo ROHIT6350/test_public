@@ -7,6 +7,6 @@ jobs:
     runs-on: slef-hosted
 
     steps:
-    - name: Checkout Repository
-    - name: Say Hello
-      run: echo "Hello, this is a simple GitHub Action running!"
+      - name: Checkout Repository
+      - name: Say Hello
+        run: echo "Hello, this is a simple GitHub Action running!"
