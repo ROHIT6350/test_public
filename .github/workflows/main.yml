@@ -1,7 +1,14 @@
-name: kroger new version
+name: Simple GitHub Action
+
 on: [push]
+
 jobs:
-  - name: the new code
-    run: |
-      echo "hello team kroger"
-      echo "hello rohit"
+  build:
+    runs-on: slef-hosted
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Say Hello
+      run: echo "Hello, this is a simple GitHub Action running!"
