@@ -1,11 +1,21 @@
-name: Simple GitHub Action
+name: Self-Hosted Runner with Parameters
 
 on: [push]
 
 jobs:
   build:
-    runs-on: slef-hosted
+    runs-on: self-hosted 
+
+    env:
+      GREETING: "Hello"
+      NAME: "GitHub Actions User"
 
     steps:
-      - name: Say Hello
-        run: echo "Hello, this is a simple GitHub Action running!"
+      - name: Print Greeting
+        run: echo "${{ env.GREETING }}, ${{ env.NAME }}!"
+
+      - name: Print Runner Info
+        run: |
+          echo "Runner OS: $RUNNER_OS"
+          echo "Runner Name: $RUNNER_NAME"
+          echo "Job is running on a self-hosted runner."
