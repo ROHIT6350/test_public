@@ -2,4 +2,6 @@ name: kroger new version
 on: [push]
 jobs:
   - name: the new code
-    run: echo "hello team kroger"
+    run: |
+      echo "hello team kroger"
+      echo "hello rohit"
